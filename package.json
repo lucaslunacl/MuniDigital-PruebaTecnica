@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-export-excel": "^0.5.3"
+  }
+}
