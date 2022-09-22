@@ -1,5 +1,6 @@
 # Prueba Técnica MuniDigital
 Formulario validado
+<br>
 input nombre, apellido, correo electronico, direccion, telefono
 
 ## Input Telefono
