@@ -18,8 +18,8 @@ function validarForm(input) {
   if (!input.correo) {
     error.correo = "Escribe un correo, es un campo obligatorio";
   }
-  if (!input.telefono) {
-    error.telefono = "Escribe un telefono, es un campo obligatorio";
+  if (!input.telefono || input.telefono.length < 10) {
+    error.telefono = "Escribe un telefono válido, es un campo obligatorio";
   }
   if (!input.direccion) {
     error.direccion = "Escribe una direccion, es un campo obligatorio";
@@ -140,10 +140,9 @@ function Form() {
         ) : (
           <ExcelFile
             className="boton-descarga"
-            element={<button onClick={pushear}> Descargar Excel</button>}
-          >
-            <ExcelSheet data={datos}  name='formulario'>
-              <ExcelColumn label="Nombre" value="nombre" />
+            element={<button onClick={pushear}> Descargar Excel</button>} filename='Formulario'>
+            <ExcelSheet data={datos}  name='formulario' >
+              <ExcelColumn  label="Nombre" value="nombre" />
               <ExcelColumn label="Apellido" value="apellido" />
               <ExcelColumn label="Direccion" value="direccion" />
               <ExcelColumn label="Correo" value="correo" />
